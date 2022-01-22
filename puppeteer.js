@@ -15,7 +15,7 @@ let context;
 async function init(i) {
     if (!browser) {
         browser = await puppeteer.launch({
-            headless: true,
+            headless: false,
             userDataDir: './userData' + (i ? `-${i}` : ''),
             args: [
                 '--user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3312.0 Safari/537.36"',

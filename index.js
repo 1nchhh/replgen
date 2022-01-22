@@ -1,7 +1,7 @@
 const {
     Worker
 } = require('worker_threads');
-require('child_process').execSync('killall chrome')
+try{require('child_process').execSync('killall chrome')}catch{}
 
 let t = parseInt(parseInt(process.argv[3]))
 function initWorker(i) {

@@ -1,0 +1,17 @@
+{
+    "dependencies": {
+        "input": "^1.0.1",
+        "puppeteer": "^13.0.1",
+        "puppeteer-extra": "^3.2.3",
+        "puppeteer-extra-plugin-stealth": "^2.9.0"
+    },
+    "name": "replgen",
+    "version": "2.0.0",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "1nch, Agent",
+    "license": "ISC",
+    "description": ""
+}

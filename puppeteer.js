@@ -19,7 +19,9 @@ async function init(i) {
             userDataDir: './userData' + (i ? `-${i}` : ''),
             args: [
                 '--user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3312.0 Safari/537.36"',
-                '--use-gl=desktop'
+                '--use-gl=desktop',
+                '--no-sandbox',
+                '--disable-setuid-sandbox',
             ],
         })
         const [page] = await browser.pages();

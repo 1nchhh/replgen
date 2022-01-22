@@ -4,7 +4,8 @@ const sleep = require('./sleep')
 const sel = {
     run: {
         start: '#workspace-root > div > div.jsx-2499438306.content > div.jsx-1703838917.workspace-page-wrapper.desktop > div > div > div:nth-child(1) > header > div > div.jsx-3980429440.center > div > div.jsx-3980429440.run-button-content > div',
-        ready: '#workspace-root > div > div.jsx-2499438306.content > div.jsx-1703838917.workspace-page-wrapper.desktop > div > div > div:nth-child(6) > div > iframe'
+        ready: '#workspace-root > div > div.jsx-2499438306.content > div.jsx-1703838917.workspace-page-wrapper.desktop > div > div > div:nth-child(6) > div > iframe',
+        canvas: '#workspace-root > div > div.jsx-2499438306.content > div.jsx-1703838917.workspace-page-wrapper.desktop > div > div > div:nth-child(6) > div > canvas'
     }
 }
 
@@ -54,13 +55,13 @@ async function generateRepl(github, cookie) {
 
     await (await page.$(sel.run.start)).click();
 
-    await waitForElement(page, sel.run.ready, 70000);
+    await sleep(1000)
+
+    await waitForElement(page, sel.run.canvas, 70000);
 
     console.log('waiting for ready')
 
     await page.close();
-
-    return;
 }
 
 /**

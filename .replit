@@ -1,2 +1,2 @@
 language = "bash"
-run = "npm i; node ."
+run = "npm i; node . 2 2"
